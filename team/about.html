@@ -1,0 +1,177 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>About Lab | Risha IITTP</title>
+    <style>
+    @import "https://fonts.googleapis.com/css?family=Ubuntu:300, 400, 500, 700";
+    *, *:after, *:before {
+      margin: 0;
+      padding: 0;
+    }
+    
+    .svg-container {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: -1;
+    }
+    
+    svg path {
+      transition: .1s;
+    }
+    svg:hover path {
+      d: path("M 800 300 Q 400 250 0 300 L 0 0 L 800 0 L 800 300 Z");
+    }
+    
+    body {
+      background: #fff;
+      color: #333;
+      font-family: 'Ubuntu', sans-serif;
+      position: relative;
+    }
+    
+    h3 {
+      font-weight: 400;
+    }
+    
+    header {
+      color: #fff;
+      padding-top: 2vw;
+      padding-bottom: 0vw;
+      text-align: center;
+    }
+    
+    main {
+      background: linear-gradient(to bottom, #ffffff 0%, #dddee1 100%);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      padding: 10vh 0 80vh;
+      position: relative;
+      text-align: center;
+      overflow: hidden;
+    }
+    main::after {
+      border-right: 2px dashed #eee;
+      content: '';
+      position: absolute;
+      top: calc(10vh + 1.618em);
+      bottom: 0;
+      left: 50%;
+      width: 2px;
+      height: 100%;
+    }
+    
+    footer {
+      background: #dddee1;
+      padding: 5vh 0;
+      text-align: center;
+      position: relative;
+    }
+    
+    small {
+      opacity: .5;
+      font-weight: 300;
+    }
+    small a {
+      color: inherit;
+    }
+    </style>
+    <script>
+      window.console = window.console || function(t) {};
+    </script>
+    <script>
+      if (document.location.search.match(/type=embed/gi)) {
+        window.parent.postMessage("resize", "*");
+      }
+    </script>
+    </head>
+    <body translate="no">
+    
+    <div class="svg-container">
+    
+    <svg viewBox="0 0 800 400" class="svg">
+    <path id="curve" fill="#000" d="M 800 300 Q 400 350 0 300 L 0 0 L 800 0 L 800 300 Z">
+    </path>
+    </svg>
+    </div>
+    <header>
+        <iframe src="head.html" frameborder="0" style="width: 100%;height: 10rem;"></iframe>
+        <div style="display: flex;" style="height: 32rem;">
+        <div style="flex: 1;">
+            <iframe src="info1.html" frameborder="0" style="width: 100%;height: 30rem;"></iframe>
+        </div>
+        <div style="flex: 1;">
+            <iframe src="info2.html" frameborder="0" style="width: 100%;height: 30rem;"></iframe>
+        </div>
+        <div style="flex: 1;">
+            <iframe src="info3.html" frameborder="0" style="width: 100%;height: 30rem;"></iframe>
+        </div>
+    </div>
+    </header>
+    <script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+    <script id="rendered-js">
+    (function () {
+      var $curve = document.getElementById("curve");
+      var last_known_scroll_position = 0;
+      var defaultCurveValue = 350;
+      var curveRate = 3;
+      var ticking = false;
+      var curveValue;
+    
+      // Handle the functionality
+      function scrollEvent(scrollPos) {
+        if (scrollPos >= 0 && scrollPos < defaultCurveValue) {
+          curveValue = defaultCurveValue - parseFloat(scrollPos / curveRate);
+          $curve.setAttribute(
+          "d",
+          "M 800 300 Q 400 " + curveValue + " 0 300 L 0 0 L 800 0 L 800 300 Z");
+    
+        }
+      }
+    
+      // Scroll Listener
+      // https://developer.mozilla.org/en-US/docs/Web/Events/scroll
+      window.addEventListener("scroll", function (e) {
+        last_known_scroll_position = window.scrollY;
+    
+        if (!ticking) {
+          window.requestAnimationFrame(function () {
+            scrollEvent(last_known_scroll_position);
+            ticking = false;
+          });
+        }
+    
+        ticking = true;
+      });
+    })();
+    //# sourceURL=pen.js
+        </script>
+    
+    <div style="display: flex;height: 900px;">
+        <div style="flex:1">
+            <iframe src="akhila.html" frameborder="0" style="width: 100%;height: 100%;"></iframe>
+        </div>
+        <div style="flex: 1;">
+            <iframe src="eeshan.html" frameborder="0" style="width: 100%;height: 100%;"></iframe>
+        </div>
+    </div>
+    <div style="display: flex;height: 900px;">
+        <div style="flex:1">
+            <iframe src="vartika.html" frameborder="0" style="width: 100%;height: 100%;"></iframe>
+        </div>
+        <div style="flex: 1;">
+            <iframe src="dheeraj.html" frameborder="0" style="width: 100%;height: 100%;"></iframe>
+        </div>
+    </div>
+    <div style="display: flex;height: 900px;">
+        <div style="flex:1">
+            <iframe src="kowndinya.html" frameborder="0" style="width: 100%;height: 100%;"></iframe>
+        </div>
+        <div style="flex: 1;">
+            <iframe src="kowndinya.html" frameborder="0" style="width: 100%;height: 100%;"></iframe>    
+        </div>
+    </div>
+    <div style="position: fixed;bottom: 0;width: 100%;height: 20rem;">
+        <iframe src="nav.html" frameborder="0" style="width: 100%;height: 20rem;"></iframe>
+    </div>
+    </body></html>
