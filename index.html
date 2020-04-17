@@ -8,9 +8,16 @@
         </style>
     </head>
     <body>
+       
         <iframe src="intro/index.html" frameborder="0" style="width: 100%;height: 8rem;"></iframe>
-        <iframe src="hangouts.html" frameborder="0" style="position: absolute;width: 75rem;float: left;height: 30rem;border-radius: 1rem;"></iframe>
-        <iframe src="profile.html" frameborder="0" style="float: right;width: 20rem;height: 30rem;"></iframe>
+        <div style="display: flex;height: 30rem;" >
+            <div style="flex: 4;">
+                <iframe src="hangouts.html" frameborder="0" style="width: 100%;height: 100%;border-radius: 1rem;"></iframe>
+            </div>
+            <div style="flex: 1;">
+                <iframe src="profile.html" frameborder="0" style="width: 100%;height: 100%"></iframe>
+            </div>
+        </div>
         <iframe src="news/top_news.html" frameborder="0" style="margin-top: 3rem;margin-left: 1rem;width: 80%;height: 6rem;overflow: hidden;" scrolling="no"></iframe>
         <p style="font-weight: 800;color: #796679;text-align: center;font-family: 'Nunito', sans-serif;">Hover on to news card for more details</p>
         <iframe src="news/news.html" frameborder="0" style="width: 100%;height: 25rem;"></iframe>
